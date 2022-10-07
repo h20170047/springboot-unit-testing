@@ -4,7 +4,14 @@ import java.util.Arrays;
 
 public class SomeBusinessImpl {
 
-    public int calculateSum(int[] data){
+    private SomeDataService someDataService;
+
+    public void setSomeDataService(SomeDataService someDataService) {
+        this.someDataService = someDataService;
+    }
+
+    public int calculateSum(){
+        int[] data= someDataService.getData();
         return Arrays.stream(data)
                 .sum();
     }
