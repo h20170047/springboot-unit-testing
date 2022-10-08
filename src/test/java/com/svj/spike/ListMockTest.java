@@ -1,4 +1,4 @@
-package com.svj.business;
+package com.svj.spike;
 
 
 import org.assertj.core.internal.bytebuddy.asm.Advice;

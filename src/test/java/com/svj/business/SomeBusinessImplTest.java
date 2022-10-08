@@ -15,7 +15,7 @@ class SomeBusinessImplTest {
     @InjectMocks
     private SomeBusinessImpl someBusiness;
     @Mock
-    private SomeDataService mockInstance;
+    private SomeDataService  mockInstance;
 
     @Test
     void calculateSum() {
