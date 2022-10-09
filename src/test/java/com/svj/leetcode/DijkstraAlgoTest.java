@@ -63,4 +63,20 @@ public class DijkstraAlgoTest {
         );
         assertThat(algo.calculateDist(edges, 5, 0, 4)).isEqualTo(5);
     }
+
+    @Test
+    public void noPathTest(){
+        DijkstraAlgo algo= new DijkstraAlgo();
+        List<Integer[]> edges= Arrays.asList(
+                new Integer[]{0, 1, 10},
+                new Integer[]{0, 2, 3},
+                new Integer[]{1, 2, 1},
+                new Integer[]{2, 1, 4},
+                new Integer[]{1, 3, 2},
+                new Integer[]{2, 4, 2},
+                new Integer[]{3, 4, 7},
+                new Integer[]{4, 3, 9}
+        );
+        assertThat(algo.calculateDist(edges, 6, 0, 5)).isEqualTo(-1);
+    }
 }

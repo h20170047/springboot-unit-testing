@@ -62,6 +62,6 @@ public class DijkstraAlgo {
                         "Path from ".
                                 concat(String.valueOf(src)).concat(" to ").concat(String.valueOf(k))
                                 .concat(": ").concat(String.valueOf(path.get(k)))));
-        return minDist.get(dsn);
+        return minDist.get(dsn)== Integer.MAX_VALUE? -1: minDist.get(dsn);
     }
 }
